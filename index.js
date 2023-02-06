@@ -61,9 +61,16 @@ async function verifyJwt(token, secret) {
   }
 }
 
+
+function copyToClipboard() {
+  const text = getEncodedJwt()
+  navigator.clipboard.writeText(text);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   calculateJwt()
-  document.getElementById('encoded').addEventListener("input", (event) => calculateJwt());
-  document.getElementById('secret').addEventListener("input", (event) => setEncodedJwt());
-  document.getElementById('decoded').addEventListener("input", (event) => setEncodedJwt());
+  document.getElementById('encoded').addEventListener("input", (event) => calculateJwt())
+  document.getElementById('secret').addEventListener("input", (event) => setEncodedJwt())
+  document.getElementById('decoded').addEventListener("input", (event) => setEncodedJwt())
+  document.getElementById('copy-button').addEventListener("click", (event) => copyToClipboard())
 });
