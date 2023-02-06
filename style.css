@@ -70,10 +70,10 @@
 .clipboard.icon {
   position: absolute;
   right: max(30px, calc((100vw - 700px) / 2));
-  /* margin-left: 7.3em; */
+  margin-top: -18px;
   caret-color: transparent;
   /* margin-top: 4px; */
-  margin-right: -30px;
+  margin-right: -10px;
   width: 11px;
   height: 13px;
   border: solid 1px #333333;
